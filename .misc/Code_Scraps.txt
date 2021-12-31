@@ -1,0 +1,518 @@
+
+
+<-(For When I add videos)->
+.Art-Card-Video video {
+    background-color: #555;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+}
+
+
+
+<--------------(When I had A DropDown)---------------------->
+
+        <!-- <div class="Dropdown">
+            <button id="Drop-Button" onclick="showContent()">Showing All</button>
+            <div class="Drop-Content" id="dropContent">
+                <button class="Selection" onclick="filterSelectionApps('_All')">Showing All</button>
+                <button class="Selection" onclick="filterSelectionApps('_Top-Rated')">Top Rated</button>
+                <button class="Selection" onclick="filterSelectionApps('_Apps')">Apps</button>
+                <button class="Selection" onclick="filterSelectionApps('_Games')">Games</button>
+            </div>
+        </div> -->
+
+        ////////////////////////////////////////////////////////////
+        
+        $(document).mouseup(function (c) {
+    var content = $(".Drop-Content");
+
+    if (!content.is(c.target) && content.has(c.target).length === 0) {
+        hideContent();
+    }
+});
+
+//////////////////////////////////////////////////////////////////////////
+
+.Dropdown {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+#Drop-Button {
+    width: 200px;
+    padding: 10px;
+    color: white;
+    background-color: #006969;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.Drop-Content {
+    width: 100%;
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.Drop-Content .Selection {
+    margin: auto;
+    width: 100%;
+    color: black;
+    background-color: whitesmoke;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+}
+
+.Drop-Content .Selection:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#Drop-Button:hover {
+    background-color: #00a0a0;
+}
+
+function showContent() {
+    var dropDown = document.getElementById("dropContent");
+
+    if (dropDown.style.display === 'block') {
+        dropDown.style.display = 'none';
+    }
+    else {
+        dropDown.style.display = 'block';
+    }
+}
+
+function hideContent() {
+    var dropDown = document.getElementById("dropContent");
+    dropDown.style.display = "none";
+}
+
+<------------------------Extra Content for Apps Page---------------->
+ <!-- <div class="Count-Ups">
+            <h1>Discover our most popular Apps and Games</h1>
+            
+            <div class="Section">
+                <span class="count">34756</span>
+                <h2>Downloads & Installations</h2>
+            </div> 
+
+            <div class="Section"> 
+                <span class="count">42</span>
+                <h2>Apps & Games</h2>
+            </div>
+
+            <div class="Section">
+                <span class="count">12</span>
+                <h2>Art & Photography</h2>
+            </div>
+
+            <div class="Section">
+                <span class="count">5</span>
+                <h2>Software & Music</h2>
+            </div>
+        </div>
+
+
+<--------------------__------------------------>
+        //#region Old Lazy-Loading 
+
+// var imgs = document.querySelectorAll("img");
+
+// setTimeout(function () {
+//     imgs.forEach(img => img.classList.remove("Blur"));
+//     imgs.forEach(img => img.src = img.dataset.src);
+//     // Array.from(document.images).forEach(img => img.classList.remove("Blur"));
+//     // Array.from(document.images).forEach(img => img.src = img.dataset.src);
+// }, 100)
+
+//#endregion
+
+
+
+
+
+
+
+
+<---------------------------Full Page POP UP------------------------->
+<div class="popup_main">
+            <button class="open_popup">Open Pop Up 1</button>
+            <div class="popup_body">
+                <div class="popup_back"></div>
+                <div class="popup_contain">
+                    <div class="popup_close">x</div>
+                    Pop Up Body 1
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="popup_main">
+            <button class="open_popup">Open Pop Up 2</button>
+            <div class="popup_body">
+                <div class="popup_back"></div>
+                <div class="popup_contain">
+                    <div class="popup_close">x</div>
+                    Pop Up Body 2
+                </div>
+            </div>
+        </div>
+
+        //////////////////////////////////////////////////////////
+        .open_popup {
+    background: tomato;
+    border: none;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.popup_body {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    -ms-transition: 300ms;
+    transition: 300ms;
+}
+
+.popup_body_show {
+    display: block;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    -ms-transition: 300ms;
+    transition: 300ms;
+}
+
+.popup_back {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup_contain {
+    position: relative;
+    background: #fff;
+    min-width: 300px;
+    max-width: 80%;
+    margin: 100px auto 50px;
+    min-height: 150px;
+    padding: 10px 20px;
+}
+
+.popup_close {
+    background: red;
+    padding: 3px 10px 5px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+////////////////////////////////////////////////////////
+$(".open_popup").click(function () {
+    $(this).parent(".popup_main").children(".popup_body").addClass("popup_body_show");
+});
+$(".popup_close").click(function () {
+    $(".popup_body").removeClass("popup_body_show");
+});
+$(".popup_back").click(function () {
+    $(".popup_body").removeClass("popup_body_show");
+});
+
+
+
+//#region Apps-Counter
+
+$('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+})
+
+//#endregion/////////////////////////////////////////////////////
+
+/////////////////// LAZY-LOADING /////////////////////////
+$(document).ready(function () {
+//     var lazyloadImages;
+
+//     if ("IntersectionObserver" in window) {
+//         lazyloadImages = document.querySelectorAll(".lazy");
+//         var imageObserver = new IntersectionObserver(function (entries, observer) {
+//             console.log(observer);
+//             entries.forEach(function (entry) {
+//                 if (entry.isIntersecting) {
+//                     var image = entry.target;
+//                     image.src = image.dataset.src;
+//                     image.classList.remove("lazy");
+//                     imageObserver.unobserve(image);
+//                 }
+//             });
+//         }, {
+//             rootMargin: "0px 0px 1000px 0px"
+//         }
+//         );
+
+//         lazyloadImages.forEach(function (image) {
+//             imageObserver.observe(image);
+//         });
+//     } else {
+//         var lazyloadThrottleTimeout;
+//         lazyloadImages = $(".lazy");
+
+//         function lazyload() {
+//             if (lazyloadThrottleTimeout) {
+//                 clearTimeout(lazyloadThrottleTimeout);
+//             }
+
+//             lazyloadThrottleTimeout = setTimeout(function () {
+//                 var scrollTop = $(window).scrollTop();
+//                 lazyloadImages.each(function () {
+//                     var el = $(this);
+//                     if (el.offset().top < window.innerHeight + scrollTop + 1000) {
+//                         var url = el.attr("data-src");
+//                         el.attr("src", url);
+//                         el.removeClass("lazy");
+//                         lazyloadImages = $(".lazy");
+//                     }
+//                 });
+//                 if (lazyloadImages.length == 0) {
+//                     $(document).off("scroll");
+//                     $(window).off("resize");
+//                 }
+//             }, 20);
+//         }
+
+//         $(document).on("scroll", lazyload);
+//         $(window).on("resize", lazyload);
+//     }
+// })
+//////////////////////////////////////////////////////////////////////
+
+
+//#region Contact Submission
+// MOVED TO THE CONTACT PAGE SINCE IT WASN"T WORKING IN UTILS.js
+// $("form").on("submit", function (event) {
+//     event.preventDefault();
+//     var dataString = $(this).serialize();
+//     $.ajax({
+//         type: "post",
+//         url: "ContactForm.php",
+//         data: dataString,
+//         success: function (data) {
+//             $("form")[0].reset();
+//         }
+//     }).done(function (data) {
+//         confrimForm();
+//     }).fail(function (data) {
+//         alert("Message wasn't sent. Try again later.")
+//     });
+// });
+
+
+//#endregion
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////HEADER STUFF///////////////////////////////
+
+
+/* .Header {
+    position: fixed;
+    width: 90%;
+    margin: 1% auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    background: transparent;
+    border: solid 2px white;
+    border-radius: 15px;
+} */
+
+/* .Header-Active {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+    border: none;
+    background: linear-gradient(to left, rgb(31, 69, 73), rgb(65, 155, 161));
+} */
+
+
+// $(document).scroll(function () {
+//     var dHeight = $(".Header").height();
+//     var alpha = (($(this).scrollTop() / dHeight) / 15);
+//     $('.Header').css('background', 'rgb(65, 155, 161,' + (alpha * 2) + ')');
+// });
+
+// $(function() {
+//     $(window).on("scroll", function() {
+//         if($(window).scrollTop() > 550) {
+//             $(".Header").addClass("Header-Active");
+//         } else {
+//            $(".Header").removeClass("Header-Active");
+//         }
+//     });
+// });
+
+
+/////////////////////////////////////////////////////////////////////////////
+<div class="Popup-Art-More">
+        <div class="Popups-Overlay-Art">
+            <div class="Popup-More-Content">
+                <div class="Top-Section" style="padding-bottom: 50px;">
+                    <i class="far fa-times-circle Popup-Close"></i>
+                    <div class="Left-Right">
+                        <i class="far fa-user-circle"></i>
+                        <span>
+                            <p style="font-size: 16px; padding-left: 15px; color: #333; font-weight: 600;">Artist's Name
+                            </p>
+                            <p style="font-size: 12px; padding-left: 15px; color: #333; text-align: left;">24K Followers
+                            </p>
+                        </span>
+                        <a>Follow</a>
+                        <a>Support</a>
+                        <span class="Spacer" style="width: 42%;"></span>
+                        <a style="width: 150px; padding: 5px 1px 5px; font-size: 20px;"><i class="far fa-heart"
+                                style="font-size: 20px;"></i> 24 Likes</a>
+                        <a class="Download"><i class="far fa-arrow-alt-circle-down"
+                                style="font-size: 20px; color: white;"></i> Free Download</a>
+                    </div>
+                </div>
+
+                <div class="Art-Card" style="width: 400px; margin: auto;">
+                    <i class="far fa-question-circle"></i>
+                    <div class="Art-Card-Image Art-Animation" style="padding-bottom: 100%;">
+                        <img class="lazy" alt="Canyon" src="_images/Large/Portrait/large_mountain.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    .Popups-Overlay-Art {
+    position: fixed;
+    padding-top: 5%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 500ms ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+
+.Popup-More-Content {
+    position: relative;
+    width: 80%;
+    /* Change this to match for mobile devices */
+    height: 95%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: opacity 2s ease-in-out;
+    text-align: center;
+}
+
+.Popup-More-Content h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.Popup-More-Content .Popup-Close {
+    position: absolute;
+    top: -25px;
+    right: -55px;
+    font-size: 45px;
+    color: black;
+}
+
+.Popup-More-Content .Popup-Close:hover {
+    color: white;
+}
+
+.Popup-More-Content .Left-Right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    color: #333;
+    /* border: solid red 1px; */
+}
+
+.Popup-More-Content .Left-Right i {
+    font-size: 35px;
+    color: #333;
+}
+
+.Popup-More-Content .Left-Right a {
+    display: block;
+    background: transparent;
+    color: #006969;
+    border-radius: 3px;
+    border: solid 1px #006969;
+    padding: 4px 5px 4px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.Popup-More-Content .Left-Right .Download {
+    width: 175px;
+    background: #00a0a0;
+    border-color: #00a0a0;
+    color: white;
+    padding: 5px 1px 5px;
+    font-size: 20px;
+}
+
+.Popup-More-Content .Left-Right a:hover, .Popup-More-Content .Left-Right a:hover i{
+    background: #00a0a0 !important;
+    border-color: #00a0a0 !important;
+    color: white;
+}
+
+.Popup-More-Content .Left-Right .Download:hover, .Popup-More-Content .Left-Right .Download:hover i{
+    background: #006969 !important;
+    border-color: #006969 !important;
+    color: white;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////

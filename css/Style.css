@@ -1,0 +1,676 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.About-Break {
+    display: none;
+}
+
+/*#region-----------------------Popups------------------------------------*/
+
+.Popups_Overlay {
+    position: fixed;
+    padding-top: 5%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 500ms ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+
+.Popup_Content {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-top: 30%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: opacity 2s ease-in-out;
+    text-align: center;
+}
+
+.Popup_Content h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.Popup_Content p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #333;
+}
+
+.Popup_Content .Popup_Close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+}
+
+.Popup_Content .Popup_Close:hover {
+    width: 35px;
+    cursor: pointer;
+}
+
+/*#endregion */
+
+/*#region-----------------------Navigation_Bar----------------------------*/
+
+.Header {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.Header .Header-Social {
+    position: absolute;
+    top: 9px;
+    left: 27%;
+    width: 125px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.Company-Name {
+    float: right;
+    padding: 5px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+}
+
+.Top-Nav {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.Top-Nav .Nav_Button {
+    float: left;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+}
+
+.Nav_Button:hover {
+    color: #000;
+    /* background-color: #ccc; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Top-Nav .Active-Page {
+    color: black;
+    text-decoration-line: underline;
+}
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+.Side_Nav {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translate(-100vw, 0);
+    padding-top: 60px;
+    transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
+    background: white
+}
+
+.Side_Nav .Nav_Button {
+    width: 100%;
+    float: left;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #888;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Side_Nav .Active-Page {
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.Side_Nav .Side_Nav_Content a {
+    transform: translatex(-50vw);
+}
+
+.Side_Nav_Border {
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    bottom: 225px;
+    left: 10px;
+    color: transparent;
+    background-color: black;
+}
+
+.Side_Nav_Contact {
+    width: 75%;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    bottom: 125px;
+    right: 30px;
+    background: transparent;
+    color: black;
+    border-radius: 15px;
+    border: solid 2px black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Side_Nav_Dashboard {
+    width: 75%;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    bottom: 175px;
+    right: 30px;
+    background: transparent;
+    color: black;
+    border-radius: 15px;
+    border: solid 2px black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Side_Nav_Closer {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Side_Nav_Closer a {
+    transform: translatex(-50vw);
+}
+
+.Side_Nav_Closer i {
+    padding: 12px;
+    margin-top: 75px;
+    color: black;
+    transform: translatex(-50vw);
+}
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+input.Nav_Menu {
+    display: none;
+}
+
+label.Nav_Menu {
+    z-index: 99;
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 25px;
+}
+
+label.Nav_Menu:hover {
+    cursor: pointer;
+}
+
+label.Nav_Menu>i {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    background-color: #333;
+    pointer-events: auto;
+    transition-duration: .25s;
+    transition-delay: .25s;
+}
+
+label.Nav_Menu>i:before, label.Nav_Menu>i:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    left: 50%;
+    background-color: #333;
+    content: "";
+    transition: transform .35s;
+}
+
+label.Nav_Menu>i:before {
+    transform: translate(-50%, -9px);
+}
+
+label.Nav_Menu>i:after {
+    transform: translate(-50%, 9px);
+}
+
+label.Nav_Menu {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+}
+
+@media screen and (min-width: 733px) {
+    .Nav_Menu {
+        display: none!important
+    }
+    .Side-Menu {
+        display: none!important
+    }
+}
+
+@media screen and (max-width:732px) {
+    .Top-Nav {
+        display: none!important
+    }
+}
+
+/*#region-----------------------Nav_Menu-Animations----------------------------*/
+
+input.Nav_Menu:checked~.Side_Nav {
+    transform: translatex(0);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a {
+    transform: translatex(0);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer i {
+    transform: translatex(0);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer .Side_Nav_Contact {
+    transform: translatex(0);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer .Side_Nav_Dashboard {
+    transform: translatex(0);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(1) {
+    transition: transform .8s 0.05s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(2) {
+    transition: transform .8s 0.10s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(3) {
+    transition: transform .8s 0.15s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(4) {
+    transition: transform .8s 0.20s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(5) {
+    transition: transform .8s 0.25s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer i:nth-child(1) {
+    transition: transform .8s 0.30s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer .Side_Nav_Contact:nth-child(2) {
+    transition: transform .8s 0.40s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+input.Nav_Menu:checked~.Side_Nav .Side_Nav_Content .Side_Nav_Closer .Side_Nav_Dashboard:nth-child(3) {
+    transition: transform .8s 0.35s cubic-bezier(0.29, 1.6, 0.44, 0.96);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+input.Nav_Menu:checked~label>i {
+    background-color: transparent;
+    transform: rotate(90deg);
+}
+
+input.Nav_Menu:checked~label>i:before {
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+input.Nav_Menu:checked~label>i:after {
+    transform: translate(-50%, -50%) rotate(-315deg);
+}
+
+/*#endregion*/
+
+/*#endregion*/
+
+/*#region-----------------------Main_Components---------------------------*/
+
+.Container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px 5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.Basic_Button a {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    background: transparent;
+    color: black;
+    border-radius: 15px;
+    border: solid 1px black;
+    padding: 5px 15px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Basic_Button a:hover, .Basic_Button a:focus, .Basic_Button a:active {
+    background: #ccc !important;
+    border-color: #ccc !important;
+    color: black;
+}
+
+.Basic_Button a:hover {
+    cursor: pointer;
+}
+
+/*#endregion*/
+
+/*#region-----------------------Closer------------------------------------*/
+
+.Closer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    text-align: center;
+    background: black;
+}
+
+.Contact a {
+    width: 45%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    background: transparent;
+    color: white;
+    border-radius: 15px;
+    border: solid 1px white;
+    padding: 5px 15px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Contact a:hover, .Contact a:focus, .Contact a:active {
+    background: #ccc !important;
+    border-color: #ccc !important;
+    color: black;
+}
+
+.Close {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.Close a {
+    color: white;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/*#endregion*/
+
+
+/*#region-----------------------MISC--------------------------------------*/
+
+
+.Back-To-Top a {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+.Back-To-Top img {
+    background-color: #fff;
+    color: #fff;
+    font-size: 55px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    filter: invert(25%);
+}
+
+/*#endregion*/
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 375px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 100%;
+    }
+    .Basic_Button a {
+        width: 45%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 90%;
+        margin-top: 30%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 100%;
+    }
+    .Basic_Button a {
+        width: 40%;
+    }
+    /* ----------Closer---------- */
+    .Contact a {
+        width: 40%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 90%;
+        margin-top: 30%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 95%;
+    }
+    .Container p {
+        width: 60%;
+        margin: auto;
+    }
+    .Basic_Button a {
+        width: 25%;
+    }
+    /* ----------Closer---------- */
+    .Contact a {
+        width: 25%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 50%;
+        margin-top: 10%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 95%;
+    }
+    .Container p {
+        width: 55%;
+    }
+    .Basic_Button a {
+        width: 20%;
+    }
+    /* ----------Closer---------- */
+    .Contact a {
+        width: 20%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 40%;
+        margin-top: 5%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 98%;
+    }
+    .Container p {
+        width: 50%;
+    }
+    .Basic_Button a {
+        width: 15%;
+    }
+    /* ----------Closer---------- */
+    .Contact a {
+        width: 15%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 32%;
+        margin-top: 5%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    /* ----------Main_Components---------- */
+    .Container {
+        width: 98%;
+    }
+    .Container p {
+        width: 55%;
+    }
+    .Basic_Button a {
+        width: 10%;
+    }
+    /* ----------Closer---------- */
+    .Contact a {
+        width: 10%;
+    }
+    /* ----------Popups------------------- */
+    .Popup_Content {
+        width: 32%;
+        margin-top: 5%;
+    }
+    .Popup_Content h2 {
+        font-size: 24px;
+    }
+    .Popup_Content p {
+        font-size: 18px;
+    }
+    .Popup_Content .Popup_Close {
+        top: 5px;
+        right: 5px;
+        width: 30px;
+    }
+}
+
+/*#endregion*/

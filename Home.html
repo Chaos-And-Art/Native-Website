@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Chaos & Art is a studio focussed on bringing Apps, Art, and Music to people all around the world.
+    Our mission is to share some of our creations, and then inspire others to make pieces of their own
+    chaos and art. We also work with others to fulfill business inquiries, and aid in creating or
+    promoting content.">
+
+    <link rel="stylesheet" href="/css/HomeStyle.css">
+    <link rel="stylesheet" href="/css/Style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+</head>
+
+<html lang="en">
+
+<body>
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button Active-Page">Home</a>
+            <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+            <a href="/Art.html" class="Nav_Button">Art</a>
+            <a href="/Apps.html" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button Active-Page">Home</a>
+                <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+                <a href="/Art.html" class="Nav_Button">Art</a>
+                <a href="/Apps.html" class="Nav_Button">Apps</a>
+                <a class="Nav_Button Music_Popup">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Back-To-Top">
+        <a id="back-top" onclick="toTop()"> <img src="/_Images-Videos/Icons/custom_arrow.png"></a>
+    </div>
+
+    <!--#endregion -->
+
+    <!-- #region Popups -->
+
+    <div class="Popup_Music">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+    <div class="Page_Content">
+
+        <div class="Home_Cover">
+            <h2>Chaos & Art</h2>
+            <p>Creations derived from time</p>
+
+            <button class="Home_Cover_Button" onclick="onExploreButton()">Explore</button>
+        </div>
+
+        <canvas class="Home_Background"></canvas>
+
+        <!--#region Annoucements-->
+        <div class="Container">
+
+            <h2>Chaos</h2>
+            <p>Chaos is where I like to throw random projects I work on for fun. The
+                interactive changing background seen above is one example of those projects. Some are simply visually
+                appealing, while others can be interacted with and customized. I hope you find
+                something exciting or thrilling while exploring them. :)
+            </p>
+
+            <div class="Basic_Button">
+                <a href="/Chaos.html">Chaos Projects</a>
+            </div>
+
+            <!-- <h2 id="test">HERE</h2> -->
+
+        </div>
+        <!-- #endregion -->
+
+        <div class="Carousel">
+            <h2>Art</h2>
+            <div class="my-slider Art_Slider">
+                <div class="Art_Slide">
+                    <a href="/Art.html"> <img class="lazy"
+                            src="/_Images-Videos/_images/Small/Landscape/small_village.jpg"
+                            data-src="/_Images-Videos/_images/Large/Landscape/large_village.jpg">
+                    </a>
+                    <p>Photo</p>
+                </div>
+                <div class="Art_Slide">
+                    <a href="/Art.html"> <img class="lazy"
+                            src="/_Images-Videos/_images/Small/Landscape/small_painting_digital_valley.jpg"
+                            data-src="/_Images-Videos/_images/Large/Landscape/large_painting_digital_valley.jpg">
+                    </a>
+                    <p>Painting</p>
+                </div>
+                <div class="Art_Slide">
+                    <a href="/Art.html"> <img class="lazy"
+                            src="/_Images-Videos/_images/Small/Landscape/small_ferns.jpg"
+                            data-src="/_Images-Videos/_images/Large/Landscape/large_ferns.jpg">
+                    </a>
+                    <p>Photo</p>
+                </div>
+                <div class="Art_Slide">
+                    <a href="/Art.html"> <img class="lazy"
+                            src="/_Images-Videos/_images/Small/Portrait/small_drawing_huskyPuppy.jpg"
+                            data-src="/_Images-Videos/_images/Large/Portrait/large_drawing_huskyPuppy.jpg">
+                    </a>
+                    <p>Drawing</p>
+                </div>
+                <div class="Art_Slide">
+                    <a href="/Art.html">
+                        <video class="lazy" autoplay muted loop playsinline>
+                            <source src="/_Images-Videos/_videos/Large/Landscape/large_lightDarkSmoke.mp4"
+                                type="video/mp4">
+                            <source data-src="/_Images-Videos/_videos/Large/Landscape/large_lightDarkSmoke.mp4"
+                                type="video/mp4">
+                        </video>
+                    </a>
+                    <p>Video</p>
+                </div>
+                <div class="Art_Slide">
+                    <a href="/Art.html"> <img class="lazy"
+                            src="/_Images-Videos/_images/Small/Landscape/small_forest.jpg"
+                            data-src="/_Images-Videos/_images/Large/Landscape/large_forest.jpg">
+                    </a>
+                    <p>Photo</p>
+                </div>
+            </div>
+
+            <div class="Basic_Button">
+                <a href="/Art.html">View More Art</a>
+            </div>
+        </div>
+
+        <div class="Carousel">
+            <h2>Art</h2>
+            <div class="my-slider Apps_Slider">
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>Basic Bounce</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>2048</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>Random Spinner</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>Notes</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>Weather</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>RicoShape</p>
+                </div>
+                <div class="App_Slide">
+                    <a href="/Apps.html"> <img class="swiper-lazy lazy" alt="Art-1"
+                            src="/_Images-Videos/_images/Extras/_Blank.jpg"
+                            data-src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                    </a>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+
+            <div class="Basic_Button">
+                <a href="/Apps.html">View More Apps</a>
+            </div>
+        </div>
+
+        <!--#region Closing-->
+        <div class="Closer">
+            <div class="Contact">
+                <a href="/Contact.html">CONTACT US</a>
+            </div>
+            <div class="Close">
+                <h2>Chaos & Art</h2>
+                <p>©2019 Chaos & Art. All Rights Reserved.</p>
+                <a href="/Privacy_Policy.html">Privacy Policy</a>
+                <a href="/Terms_Conditions.html">Terms and Conditions</a>
+            </div>
+        </div>
+        <!--#endregion-->
+
+    </div>
+
+    <!--#region-Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <script src="/js/_Utils.js"></script>
+    <script src="/js/HomeUtils.js"></script>
+
+
+
+
+    <!-- #endregion -->
+
+</body>
+
+</html>

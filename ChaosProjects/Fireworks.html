@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Style-->
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/ChaosProjects/FireworksStyle.css">
+
+</head>
+
+<html lang="en">
+
+<body>
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button">Home</a>
+            <a href="/Chaos.html" class="Nav_Button Active-Page">Chaos</a>
+            <a href="/Art.html" class="Nav_Button">Art</a>
+            <a href="/Apps.html" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button">Home</a>
+                <a href="/Chaos.html" class="Nav_Button Active-Page">Chaos</a>
+                <a href="/Art.html" class="Nav_Button">Art</a>
+                <a href="/Apps.html" class="Nav_Button">Apps</a>
+                <a class="Nav_Button Music_Popup">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--#endregion -->
+
+    <!-- #region Popups -->
+
+    <div class="Popup_Music">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+    <div class="Chaos_Body Page_Content">
+        <div id="canvas-container"></div>
+
+        <div class="Slide_Up" id="Slide_Up">
+            <div class="Fireworks_Control_Button" id="Fireworks_Control_Button" onclick="toggleController()">
+                Fireworks Controller
+            </div>
+            <div class="Slide_Content" id="Slide_Content">
+                <div class="Presets">
+                    <div class="Dropdown_Button" id="Dropdown_Button" onclick="togglePresetsDropdown()">
+                        <table style="width: 100%;">
+                            <td style="text-align: left;">Preset Fireworks:
+                                <p style="display: inline;" id="text_change">Default</p>
+                            </td>
+                            <td class="fas fa-caret-down"></td>
+                        </table>
+                    </div>
+                    <div class="Dropdown_Content" id="Dropdown_Content">
+                        <button onclick="defaultFireworks()">Default</button>
+                        <button onclick="longFall()">Long Fall</button>
+                        <button onclick="antiGravity()">Anti-Gravity</button>
+                        <button onclick="slowLaunch()" >Slow Launch</button>
+                        <button onclick="randomTrails()" >Random Trails</button>
+                    </div>
+                    </nav>
+                </div>
+
+
+
+
+
+                <!-- 
+                <div class="Presets">
+                    <div style="display: flex;">
+                        <button style="margin-top: 10px;">Preset Customizations:</button>
+                        <p class="Selected_Preset" id="text_change">Default</p>
+                    </div>
+
+                    <div class="Presets_Content">
+                        <button onclick="defaultFireworks()">Default</button>
+                        <button onclick="longFall()">Long Fall</button>
+                        <button onclick="antiGravity()">Anti-Gravity</button>
+                        <button>Slow Launch</button>
+                        <button>Random Trails</button>
+                    </div>
+                </div>
+                <div class="Color_Options">
+                    <div style="display: flex;">
+                        <button style="margin-top: 10px;">Color Wheel</button>
+                        <p class="Selected_Preset" id="text_change"
+                            style="border: solid 1px #333; padding: 1px 10px 1px; margin-left: 25px; font-size: 15px;">
+                            Set Random</p>
+                    </div>
+                    <div class="Color_Picker">
+                        <main>
+                            <div class="wrap">
+                                <div class="bodys">
+                                    <div id="color_picker"></div>
+                                    <p class="sample">
+                                        <i class="Scolor"></i>
+                                        <em class="Scode"></em>
+                                    </p>
+                                </div>
+                                <nav class="controller">
+                                    <label>
+                                        <span>Type: </span>
+                                        <select onchange="onChangeType(this)">
+                                            <option value="default" selected>default</option>
+                                            <option value="circle">circle</option>
+                                            <option value="mini">mini</option>
+                                            <option value="ring">ring</option>
+                                            <option value="none">none</option>
+                                        </select>
+                                    </label>
+                                </nav>
+                            </div>
+                        </main>
+                    </div>
+                </div> -->
+                <!-- <div class="Custom_Content">
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Firework Speed:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Firework_Speed_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="Firework_Speed_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Speed:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_Speed_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="55" class="slider" id="Particle_Speed_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Speed Variation:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_SpeedVar_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="25" class="slider" id="Particle_SpeedVar_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Count:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_Count_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="75" class="slider" id="Particle_Count_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Friction:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_Friction_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="14" class="slider" id="Particle_Friction_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Gravity:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_Gravity_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="1" class="slider" id="Particle_Gravity_Range">
+                    </div>
+                    <div class="slidecontainer">
+                        <div style="display: flex;">
+                            <h4>Particle Flicker:</h4>
+                            <p style="padding-left: 5px; line-height: 24px;" id="Particle_Flicker_Value">0</p>
+                        </div>
+                        <input type="range" min="1" max="100" value="15" class="slider" id="Particle_Flicker_Range">
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!--#region-Scripts-->
+
+    <!--jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/ChaosProjects/Javascript/Fireworks.js"></script>
+    <script src="/js/_Utils.js"></script>
+
+    <!-- #endregion -->
+
+</body>
+
+</html>

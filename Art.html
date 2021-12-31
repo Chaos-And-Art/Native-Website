@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/ArtStyle.css">
+</head>
+
+<html lang="en">
+
+<body>
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button">Home</a>
+            <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+            <a href="/Art.html" class="Nav_Button Active-Page">Art</a>
+            <a href="/Apps.html" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button">Home</a>
+                <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+                <a href="/Art.html" class="Nav_Button Active-Page">Art</a>
+                <a href="/Apps.html" class="Nav_Button">Apps</a>
+                <a class="Nav_Button Music_Popup">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Back-To-Top">
+        <a id="back-top" onclick="toTop()"> <img src="/_Images-Videos/Icons/custom_arrow.png"></a>
+    </div>
+
+    <!--#endregion -->
+    <!-- #region Popups -->
+
+    <div class="Popup_Music">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Popup_ImgOptions">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Features Coming Soon!</h2>
+                <p>Liking and downloading art will be available in the near future! <br> :)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <!--#region Cards -->
+
+    <div class="Art_Container Page_Content">
+
+        <h2>Art</h2>
+        <nav class="Horizontal-Scroll" id="Horizontal_Scroll">
+            <button class="Active-Tab Scroll-Tab" onclick="filterSelectionArt('_Recent'), positionGridItems()">Recently
+                Added</button>
+            <button class="Scroll-Tab" onclick="filterSelectionArt('_Photos'), positionGridItems()">Photos</button>
+            <button class="Scroll-Tab" onclick="filterSelectionArt('_Videos'), positionGridItems()">Videos</button>
+            <button class="Scroll-Tab" onclick="filterSelectionArt('_Drawings'), positionGridItems()">Drawings</button>
+            <button class="Scroll-Tab"
+                onclick="filterSelectionArt('_Paintings'), positionGridItems()">Paintings</button>
+        </nav>
+
+        <div class="Scroll-Controls">
+            <a class="prev_tab"><img src="/_Images-Videos/Icons/arrow_left.png"></a>
+            <a class="next_tab"><img src="/_Images-Videos/Icons/arrow_right.png"></i></a>
+        </div>
+        <br>
+
+        <div class="Art_Gallery">
+
+            <div class="Art_Card _Photos _Recent">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Landscape/small_ferns.jpg"
+                    data-src="/_Images-Videos/_images/Large/Landscape/large_ferns.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                    <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_downtown.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_downtown.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_flower.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_flower.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_light.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_light.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos _Recent">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_pink.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_pink.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Landscape/small_rain.jpg"
+                    data-src="/_Images-Videos/_images/Large/Landscape/large_rain.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_space.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_space.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Portrait/small_trees.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_trees.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Photos _Recent">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns" src="/_Images-Videos/_images/Small/Landscape/small_village.jpg"
+                    data-src="/_Images-Videos/_images/Large/Landscape/large_village.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Videos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <video class="Card_Image lazy" autoplay muted loop playsinline>
+                    <source src="/_Images-Videos/_videos/Large/Landscape/large_flowingWater.mp4" type="video/mp4">
+                    <source data-src="/_Images-Videos/_videos/Large/Landscape/large_flowingWater.mp4" type="video/mp4">
+                </video>
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Videos">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <video class="Card_Image lazy" autoplay muted loop playsinline>
+                    <source src="/_Images-Videos/_videos/Large/Landscape/large_lightDarkSmoke.mp4" type="video/mp4">
+                    <source data-src="/_Images-Videos/_videos/Large/Landscape/large_lightDarkSmoke.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Paintings">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns"
+                    src="/_Images-Videos/_images/Small/Landscape/small_painting_digital_valley.jpg"
+                    data-src="/_Images-Videos/_images/Large/Landscape/large_painting_digital_valley.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+            <div class="Art_Card _Drawings">
+                <img class="Details_Icon" src="/_Images-Videos/Icons/question.png">
+                <img class="Card_Image lazy" alt="Ferns"
+                    src="/_Images-Videos/_images/Small/Portrait/small_drawing_huskyPuppy.jpg"
+                    data-src="/_Images-Videos/_images/Large/Portrait/large_drawing_huskyPuppy.jpg">
+                <div class="Card_Details">
+                    <h2>Art Details</h2>
+                    <p> This is a temporary placeholder. Future details for art will be placed here. I
+                        appreciate you
+                        taking
+                        the time to explore my website.
+                        :)
+                    </p>
+                </div>
+                <div class="Card_Options">
+                     <img class="Icon" src="/_Images-Videos/Icons/user.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+                    <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--#endregion -->
+
+    <!--#region Closing-->
+    <div class="Closer">
+        <div class="Contact">
+            <a href="/Contact.html">CONTACT US</a>
+        </div>
+        <div class="Close">
+            <h2>Chaos & Art</h2>
+            <p>©2019 Chaos & Art. All Rights Reserved.</p>
+            <a href="/Privacy_Policy.html">Privacy Policy</a>
+            <a href="/Terms_Conditions.html">Terms and Conditions</a>
+        </div>
+    </div>
+    <!--#endregion-->
+
+
+    <!--#region-Scripts-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/ArtUtils.js"></script>
+
+    <script src="/js/_TabsFilter.js"></script>
+    <script src="/js/_Utils.js"></script>
+
+    <!-- #endregion -->
+
+</body>
+
+</html>

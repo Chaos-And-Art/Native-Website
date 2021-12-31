@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/AppsStyle.css">
+</head>
+
+<html lang="en">
+
+<body onLoad="filterSelectionApps('_All')">
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button">Home</a>
+            <a href="/Chaos.html" class="Nav_Button">Chaos</a>
+            <a href="/Art.html" class="Nav_Button">Art</a>
+            <a href="/Apps.html" class="Nav_Button Active-Page">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button">Home</a>
+                <a href="/Chaos.html" class="Nav_Button">Chaos</a>
+                <a href="/Art.html" class="Nav_Button">Art</a>
+                <a href="/Apps.html" class="Nav_Button Active-Page">Apps</a>
+                <a class="Nav_Button Music_Popup">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Back-To-Top">
+        <a id="back-top" onclick="toTop()"> <img src="/_Images-Videos/Icons/custom_arrow.png"></a>
+    </div>
+
+    <!--#endregion -->
+
+    <!-- #region Popups -->
+
+    <div class="Popup_Music">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Popup_Apple">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>App Store Availablity Coming Soon!</h2>
+                <p>App download for Apple/IOS is currently in development, but will be available in the near future!
+                    We apologize for the inconvenience.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <!--#region Cards -->
+
+    <div class="Container Page_Content" style="margin-top: 50px;">
+
+        <h2>Apps and Games</h2>
+        <nav class="Horizontal-Scroll" id="Horizontal_Scroll">
+            <button class="Active-Tab Scroll-Tab" onclick="filterSelectionApps('_All')">Show All</button>
+            <button class="Scroll-Tab" onclick="filterSelectionApps('_Top-Rated')">Top Rated</button>
+            <button class="Scroll-Tab" onclick="filterSelectionApps('_Apps')">Apps</button>
+            <button class="Scroll-Tab" onclick="filterSelectionApps('_Games')">Games</button>
+        </nav>
+
+        <div class="Scroll-Controls">
+            <a class="prev_tab"><img src="/_Images-Videos/Icons/arrow_left.png"></a>
+            <a class="next_tab"><img src="/_Images-Videos/Icons/arrow_right.png"></i></a>
+        </div>
+
+        <div class="Apps-Card-Container">
+            <!-- This is what the app card will look like when ready -->
+            <!-- <div class="Apps-Card _Apps">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img class="lazy" alt="App-1" src="_images/Landscape/Small/small_bridge.jpg"
+                        data-src="_images/Landscape/Big/big_bridge.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>App 1</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="_images/Google.png" data-src="_images/Google.png" alt="Google Play"></a>
+                    <a href="https://www.apple.com/ios/app-store/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="_images/Apple.png" data-src="_images/Apple.png" alt="App Store"></a>
+                </div>
+            </div> -->
+
+            <div class="Apps-Card _Apps">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="App-1" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>App 1</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <!-- href="https://www.apple.com/ios/app-store/" -->
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+            <div class="Apps-Card _Games _Top-Rated">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="Game-1" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>Game 1</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+            <div class="Apps-Card _Games _Top-Rated">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="Game-2" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>Game 2</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+            <div class="Apps-Card _Apps">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="App-2" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>App 2</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+            <div class="Apps-Card _Games">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="Game-3" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>Game 3</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+            <div class="Apps-Card _Apps">
+                <div class="Apps-Card-Image Apps-Animation">
+                    <img alt="App-3" src="/_Images-Videos/_images/Extras/_Blank.jpg">
+                </div>
+                <div class="Apps-Card-Info">
+                    <h4>Click to Play</h4>
+                    <h2>App 3</h2>
+                    <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                        almost here! I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://play.google.com/"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Google.png"
+                            data-src="/_Images-Videos/_images/Google.png" alt="Google Play"></a>
+                    <a class="Apple_Popup"><img style="background-color: rgba(0, 0, 0, 0);"
+                            src="/_Images-Videos/_images/Extras/Apple.png" data-src="/_Images-Videos/_images/Apple.png"
+                            alt="App Store"></a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--#endregion -->
+
+    <!--#region Closing-->
+    <div class="Closer">
+        <div class="Contact">
+            <a href="/Contact.html">CONTACT US</a>
+        </div>
+        <div class="Close">
+            <h2>Chaos & Art</h2>
+            <p>©2019 Chaos & Art. All Rights Reserved.</p>
+            <a href="/Privacy_Policy.html">Privacy Policy</a>
+            <a href="/Terms_Conditions.html">Terms and Conditions</a>
+        </div>
+    </div>
+    <!--#endregion-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/_TabsFilter.js"></script>
+    <script src="/js/_Utils.js"></script>
+
+</body>
+
+</html>

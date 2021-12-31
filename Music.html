@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Style-->
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/fontawesome-free-5.13.1-web/css/all.css">
+
+</head>
+
+<html lang="en">
+
+<body onLoad="filterSelectionMusic('_All')">
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button">Home</a>
+            <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+            <a href="/Art.html" class="Nav_Button">Art</a>
+            <a href="/Apps.html" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music-Popup Active-Page">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button">Home</a>
+                <a href="/Chaos.html" class="Nav_Button">Chaos</a>
+                <a href="/Art.html" class="Nav_Button">Art</a>
+                <a href="/Apps.html" class="Nav_Button">Apps</a>
+                <a class="Nav_Button Music_Popup Active-Page">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Back-To-Top">
+        <a id="back-top" onclick="toTop()"> <img src="/_Images-Videos/Icons/custom_arrow.png"></a>
+    </div>
+
+    <!--#endregion -->
+
+    <!-- #region Popups -->
+
+    <div class="Popup-Music">
+        <div class="Popups-Overlay">
+            <div class="Popup-Content">
+                <i class="far fa-times-circle Popup-Close"></i>
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+
+    <!--#region Intro-->
+    <div class="Box" style="margin-top: 50px; padding-top: 20px;">
+        <h2>Music</h2>
+        <nav class="Horizontal-Scroll">
+            <button class="Active-Tab Scroll-Tab" onclick="filterSelectionMusic('_All')">Show All</button>
+            <button class="Scroll-Tab" onclick="filterSelectionMusic('Song')">Songs</button>
+            <button class="Scroll-Tab" style="margin-right: 30px;"
+                onclick="filterSelectionMusic('Instrument')">Instrumentals</button>
+        </nav>
+
+        <div class="Scroll-Controls">
+            <a class="prev_tab"><i class="fas fa-chevron-left"></i></a>
+            <a class="next_tab"><i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="Music-Card-Container">
+            <div class="Music-Card Song">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_pink.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_pink.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Song 1</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+            <div class="Music-Card Instrument">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_city.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_city.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Instrument 1</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+            <div class="Music-Card Song">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_downtown.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_downtown.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Song 2</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+            <div class="Music-Card Instrument">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_flower.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_flower.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Instrument 2</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+            <div class="Music-Card Instrument">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_leaf.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_leaf.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Instrument 3</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+            <div class="Music-Card Song">
+                <div class="Music-Card-Image Music-Animation">
+                    <img class="lazy" alt="App-1" src="/_Images-Videos/_images/Portrait/Small/small_mountain.jpg"
+                        data-src="/_Images-Videos/_images/Portrait/Big/big_mountain.jpg">
+                </div>
+                <div class="Music-Card-Info">
+                    <h4>Click to Listen</h4>
+                    <h2>Song 3</h2>
+                    <p> This is a temporary placeholder. Music is not yet available, nor is this layout final.
+                        I appreciate you taking the time to explore my website. :)
+                    </p>
+                </div>
+                <div class="Layer-Links">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"
+                            style="color: red; background-color: white;"></i></a>
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"
+                            style="color: #1DB954; background-color: black;"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--#endregion -->
+
+
+
+    <!--#region Social-->
+    <div class="Box">
+        <h2>JOIN US</h2>
+        <div class="Social-Links">
+            <a href="https://www.youtube.com/channel/UCiKZ7lGT_YsVageXRisVCOA"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/chaos.and.art_/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/_ChaosAndArt_"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/Chaos-And-Art"><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-patreon"></i></a>
+        </div>
+    </div>
+    <!--#endregion-->
+
+    <!--#region Closing-->
+    <div class="Closer">
+        <div class="Contact">
+            <a href="/Contact.html">CONTACT US</a>
+        </div>
+        <div class="Close">
+            <h2>Chaos & Art</h2>
+            <p>©2019 Chaos & Art. All Rights Reserved.</p>
+            <a href="/Privacy_Policy.html">Privacy Policy</a>
+            <a href="/Terms_Conditions.html">Terms and Conditions</a>
+        </div>
+    </div>
+    <!--#endregion-->
+
+    <!--#region-Scripts-->
+
+    <!--jQuery -->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+
+    <!--Utils-->
+    <script src="/js/_TabsFilter.js"></script>
+    <script src="/js/_Utils.js"></script>
+
+    <!-- #endregion -->
+
+
+</body>
+
+</html>

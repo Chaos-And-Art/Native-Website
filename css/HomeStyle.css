@@ -1,0 +1,232 @@
+.Home_Cover {
+    width: 85%;
+    height: auto;
+    margin: auto;
+    color: #eee;
+    background: #111;
+    opacity: .9;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Home_Cover_Button {
+    width: 45%;
+    margin: auto;
+    color: white;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px 15px 5px;
+    border: solid 1px white;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.Home_Cover_Button:hover, .Home_Cover_Button:focus, .Home_Cover_Button:active {
+    background: #bbb !important;
+    border-color: #bbb !important;
+    color: black;
+}
+
+.Carousel {
+    border-radius: 10px;
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 10px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.Art_Slider .Art_Slide img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    transform: translateX(8%);
+}
+
+.Art_Slider .Art_Slide video {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    transform: translateX(8%);
+}
+
+.Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+    transform: translateX(8%);
+}
+
+.Apps_Slider .App_Slide img {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    transform: translateX(8%);
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 375px) {
+    .Home_Cover {
+        width: 75%;
+    }
+    .Carousel {
+        width: 100%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 250px;
+        transform: translateX(8%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 250px;
+        transform: translateX(8%);
+    }
+    .Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+        transform: translateX(8%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 500px;
+        transform: translateX(8%);
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .Home_Cover {
+        width: 75%;
+    }
+    .Carousel {
+        width: 100%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 250px;
+        transform: translateX(10.5%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 250px;
+        transform: translateX(10.5%);
+    }
+    .Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+        transform: translateX(10.5%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 500px;
+        transform: translateX(10.5%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Home_Cover {
+        width: 45%;
+    }
+    .Carousel {
+        width: 95%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 250px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 250px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+        transform: translateX(0%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 500px;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Home_Cover {
+        width: 30%;
+    }
+    .Carousel {
+        width: 95%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 250px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 250px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide p {
+        transform: translateX(0%);
+    }
+    .Apps_Slider .App_Slide p {
+        transform: translateX(25%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 500px;
+        transform: translateX(25%);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Home_Cover {
+        width: 22%;
+    }
+    .Carousel {
+        width: 98%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 275px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 275px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+        transform: translateX(0%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 500px;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .Home_Cover {
+        width: 15%;
+    }
+    .Carousel {
+        width: 98%;
+    }
+    .Art_Slider .Art_Slide img {
+        height: 325px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide video {
+        height: 325px;
+        transform: translateX(0%);
+    }
+    .Art_Slider .Art_Slide p, .Apps_Slider .App_Slide p {
+        transform: translateX(0%);
+    }
+    .Apps_Slider .App_Slide img {
+        height: 600px;
+        transform: translateX(0%);
+    }
+}
+
+/*#endregion*/

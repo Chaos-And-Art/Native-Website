@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chaos & Art</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/ContactStyle.css">
+    <link rel="stylesheet" href="/css/Style.css">
+
+</head>
+
+<html lang="en">
+
+<body>
+    <!--#region Navigation-->
+    <div class="Header">
+        <a href="https://chaosandart.studio/" class="Company-Name Nav_Button">Chaos & Art</a>
+        <nav class="Top-Nav">
+            <a href="/Home.html" class="Nav_Button">Home</a>
+            <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+            <a href="/Art.html" class="Nav_Button">Art</a>
+            <a href="/Apps.html" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </nav>
+    </div>
+
+    <input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+    <label class="Nav_Menu" for="Nav_Menu">
+        <i></i>
+    </label>
+    <nav class="Side_Nav">
+        <div class="Side_Nav_Content">
+            <div class="Side_Nav_Links">
+                <a href="/Home.html" class="Nav_Button">Home</a>
+                <a href="/Chaos.html" class="Nav_Button ">Chaos</a>
+                <a href="/Art.html" class="Nav_Button">Art</a>
+                <a href="/Apps.html" class="Nav_Button">Apps</a>
+                <a class="Nav_Button Music_Popup">Music</a>
+            </div>
+
+            <div class="Side_Nav_Closer">
+                <div class="Side_Nav_Border">-</div>
+                <a class="Side_Nav_Contact" href="/Contact.html">CONTACT US</a>
+                <a class="Side_Nav_Dashboard" href="/Dashboard.html">DASHBOARD</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Back-To-Top">
+        <a id="back-top" onclick="toTop()"> <img src="/_Images-Videos/Icons/custom_arrow.png"></a>
+    </div>
+
+    <!--#endregion -->
+
+    <!-- #region Popups -->
+
+    <div class="Popup_Music">
+        <div class="Popups_Overlay">
+            <div class="Popup_Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Music Coming Soon!</h2>
+                <p>The Music page is currently in development, but will be available in the near future!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Popup_Contact">
+        <div class="Popups_Overlay">
+            <div class="Popup-Content">
+                <img src="/_Images-Videos/Icons/close.png" class="Popup_Close">
+                <h2>Successfully sent!</h2>
+                <p>We will get back to you as soon as we can! <br> Thankyou!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <div class="Page_Content">
+        <!--#region Contact-->
+        <div class="Contact-Intro" style="margin-top: 50px; padding-top: 30px;">
+            <h2>Contact</h2>
+            <br>
+            <p style="color: rgb(255, 100, 100); font-weight: 600;">Currently we are unable to assist with new Business
+                Inquiries. If you
+                have any
+                questions, comments, or concerns don't hesitate to contact us. We will get back to you at
+                our earliest convenience. Thank you for your time and patience!</p>
+            <br>
+            <br>
+            <h3 style="font-size: 25px; color: #006969;">Prospective Clients</h3>
+            <p>Do you have an App or Game idea but unsure where to start? Maybe you need a Website to showcase
+                your passion, or drive traffic for your business. How about photos and drone footage, or drawings and
+                paintings? Chaos & Art is here to help with all your App, Game, and Web development; as well as your
+                Photography, Videography, Drawing, and Painting needs. Click the respective link below for more details
+                and
+                information.</p>
+            <br>
+            <div class="Basic_Button">
+                <a href="/Business_Info.html">Business Information</a>
+            </div>
+        </div>
+
+        <div class="Container">
+            <div class=Contact-Us>
+                <h3>Contact us at: </h3>
+                <p>support@chaosandart.studio</p>
+                <p style="color: black; font-weight: 600; padding: 15px 0px 15px 0px;">OR</p>
+                <p>Fill out our contact form below!</p>
+                <br>
+            </div>
+        </div>
+
+        <!-- #endregion -->
+
+        <!--#region Contact-Form-->
+        <div class="Container">
+            <h2>Contact Form</h2>
+            <form class="Contact-Form">
+                <div class="Form-Input">
+                    <img src="/_Images-Videos/Icons/user.png">
+                    <input type="text" id="Name" name="Name" placeholder="Name" required>
+                </div>
+
+                <div class="Form-Input">
+                    <img src="/_Images-Videos/Icons/at.png">
+                    <input type="email" id="Email" name="Email" placeholder="Email" required>
+                </div>
+
+                <div class="Form-Input">
+                    <img src="/_Images-Videos/Icons/clipboard.png">
+                    <input type="subject" id="Subject" name="Subject" placeholder="Subject" required>
+                </div>
+
+                <div class="Form-Input">
+                    <textarea id="Message" name="Message" maxlength="3000" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="Form-Button">
+                    <div class="Basic_Button">
+                        <a href="/Business_Info.html" type="submit" name="submit">Send</a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Closing-->
+        <div class="Closer">
+            <!-- <div class="Contact">
+            <a href="Contact.html">CONTACT US</a>
+        </div> -->
+            <div class="Close">
+                <h2>Chaos & Art</h2>
+                <p>©2019 Chaos & Art. All Rights Reserved.</p>
+                <a href="/Privacy_Policy.html">Privacy Policy</a>
+                <a href="/Terms_Conditions.html">Terms and Conditions</a>
+            </div>
+        </div>
+        <!--#endregion-->
+
+    </div>
+
+    <!--#region-Scripts-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/_Utils.js"></script>
+
+    <!-- #endregion -->
+
+</body>
+
+</html>
